@@ -57,8 +57,8 @@ for url in urllist:
             contact_persons.append(person.text.strip())
 
 
-companies_df=pd.DataFrame({'Company':companies[:118],'Contact Name':contact_persons[:118],
-                            'Street Address':street_addresses[:118],'City':cities[:118],
-                            'State':states[:118],'Pincode':pincodes[:118],'Contact No.':phones[:118]})
+companies_df=pd.DataFrame({'Company':companies,'Contact Name':contact_persons,
+                            'Street Address':street_addresses,'City':cities,
+                            'State':states,'Pincode':pincodes,'Contact No.':phones})
 
 companies_df.to_csv('scraped_data.csv')
